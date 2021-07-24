@@ -429,6 +429,7 @@ const Radar = function (size, radar) {
   }
 
   function plotRadarHeader () {
+    document.title = "Technology Radar";
     header = d3.select('body').insert('header', '#radar')
     header.append('div')
       .attr('class', 'radar-title')
@@ -452,6 +453,9 @@ const Radar = function (size, radar) {
 
     alternativeDiv = header.append('div')
       .attr('id', 'alternative-buttons')
+      .attr('display', 'false')
+
+    document.getElementById("alternative-buttons").style.display = "none";
 
     return header
   }
@@ -498,10 +502,13 @@ const Radar = function (size, radar) {
       .append('div')
       .attr('class', 'footer-content')
       .append('p')
-      .html('Powered by <a href="https://www.thoughtworks.com"> Thoughtworks</a>. ' +
-      'By using this service you agree to <a href="https://www.thoughtworks.com/radar/tos">Thoughtworks\' terms of use</a>. ' +
-      'You also agree to our <a href="https://www.thoughtworks.com/privacy-policy">privacy policy</a>, which describes how we will gather, use and protect any personal data contained in your public Google Sheet. ' +
-      'This software is <a href="https://github.com/thoughtworks/build-your-own-radar">open source</a> and available for download and self-hosting.')
+      .html('© <a href="https://mur.li">mur.li</a>, <a href="https://github.com/smurli/build-your-own-radar">GitHub</a>')
+      // .html('Powered by <a href="https://www.thoughtworks.com"> Thoughtworks</a>. ' +
+      // 'By using this service you agree to <a href="https://www.thoughtworks.com/radar/tos">Thoughtworks\' terms of use</a>. ' +
+      // 'You also agree to our <a href="https://www.thoughtworks.com/privacy-policy">privacy policy</a>, which describes how we will gather, use and protect any personal data contained in your public Google Sheet. ' +
+      // 'This software is <a href="https://github.com/thoughtworks/build-your-own-radar">open source</a> and available for download and self-hosting.')
+
+      
   }
 
   function mouseoverQuadrant (order) {
