@@ -429,7 +429,7 @@ const Radar = function (size, radar) {
   }
 
   function plotRadarHeader () {
-    document.title = "Technology Radar";
+    document.title = "Technology Radar For Startups";
     header = d3.select('body').insert('header', '#radar')
     header.append('div')
       .attr('class', 'radar-title')
@@ -440,10 +440,10 @@ const Radar = function (size, radar) {
       .style('cursor', 'pointer')
       .on('click', redrawFullRadar)
 
-    header.select('.radar-title')
-      .append('div')
-      .attr('class', 'radar-title__logo')
-      .html('<a href="https://www.thoughtworks.com"> <img src="/images/logo.png" /> </a>')
+    // header.select('.radar-title')
+    //   .append('div')
+    //   .attr('class', 'radar-title__logo')
+    //   .html('<a href="https://www.thoughtworks.com"> <img src="/images/logo.png" /> </a>')
 
     buttonsGroup = header.append('div')
       .classed('buttons-group', true)
@@ -481,9 +481,8 @@ const Radar = function (size, radar) {
     buttonsGroup.append('div')
       .classed('print-radar-btn', true)
       .append('div')
-      .classed('print-radar button no-capitalize', true)
-      .text('Print this radar')
-      .on('click', window.print.bind(window))
+      .classed('print-radar no-capitalize', true)
+      .text('Please select a quadrant or select a category to view')
 
     alternativeDiv.append('div')
       .classed('search-box', true)

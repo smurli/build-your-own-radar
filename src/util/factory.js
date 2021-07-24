@@ -230,6 +230,9 @@ const GoogleSheetInput = function () {
       plotForm(content)
 
       plotFooter(content)
+
+      console.log("Redirecting")
+      window.location.href="?sheetId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vQZUgSanncLcGDzffE25VncyhNBH9_GaRD-7ZY-vvgvGxKUQL5dpAKEH0vVYqjoWgLrFXBeTEjC24u7%2Fpub%3Foutput%3Dcsv"
     }
   }
 
